@@ -1,9 +1,14 @@
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-sqlalchemy==2.0.23
-pydantic==2.5.0
-pydantic-settings==2.1.0
-python-multipart==0.0.6
-aiofiles==23.2.1
-streamlit==1.37.1
-pandas==2.2.2
+# Keep compatible with Streamlit Cloud (Python 3.11/3.13)
+streamlit>=1.37,<2
+pandas>=2.2,<3
+
+# Shared project dependencies
+sqlalchemy>=2.0.23,<3
+pydantic>=2.8,<3
+pydantic-settings>=2.3,<3
+python-multipart>=0.0.9,<1
+aiofiles>=23.2,<25
+
+# API stack (not required by Streamlit runtime, but kept for backend usage)
+fastapi>=0.111,<1
+uvicorn[standard]>=0.30,<1
